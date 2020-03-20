@@ -1,6 +1,7 @@
 package io.github.xmu_android_basics.scrollabletextviewexample;
 
 import android.os.Bundle;
+import android.text.method.ScrollingMovementMethod;
 import android.view.View;
 import android.widget.TextView;
 
@@ -21,6 +22,8 @@ public class MainActivity extends AppCompatActivity {
         for (i = 0; i < 10; i++) {
             largeText.append("\n" + i + ": Filling text...");
         }
+
+        largeText.setMovementMethod(new ScrollingMovementMethod());
     }
 
     public void onClick(View view) {
